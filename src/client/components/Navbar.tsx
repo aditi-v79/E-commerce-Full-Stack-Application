@@ -19,6 +19,9 @@ export default function Navbar() {
             <Link to="/products" className="ml-8 text-gray-600 hover:text-gray-800">
               Products
             </Link>
+            <Link to="/orders" className="ml-8 text-gray-600 hover:text-gray-800">
+              Orders
+            </Link>
           </div>
           <div className="flex items-center">
             <Link to="/cart" className="text-gray-600 hover:text-gray-800 relative">

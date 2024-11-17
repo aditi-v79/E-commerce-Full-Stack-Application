@@ -6,6 +6,8 @@ import Products from './pages/Products';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import OrderHistory from "./pages/OrderHistory.tsx";
+import AdminPanel from "./pages/AdminPanel.tsx";
 import { AuthProvider } from './context/AuthContext';
 
 const queryClient = new QueryClient();
@@ -24,6 +26,9 @@ export default function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/orders" element={<OrderHistory />} />
+                <Route path="/admin" element={<AdminPanel />} />
+
               </Routes>
             </main>
           </div>
