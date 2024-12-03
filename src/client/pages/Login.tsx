@@ -11,12 +11,14 @@ export default function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Login button clicked!");
     try {
       const { token } = await login({ email, password });
       authLogin(token, { email });
       navigate('/');
     } catch (error) {
       console.error('Login failed:', error);
+      alert('Login failed. Please check your credentials.');
     }
   };
 

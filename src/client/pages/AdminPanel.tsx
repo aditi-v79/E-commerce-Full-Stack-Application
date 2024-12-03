@@ -1,14 +1,19 @@
+// pages/AdminPanel.tsx
 import { useState } from 'react';
-import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
+import axios from 'axios';
 
 export default function AdminPanel() {
-    const { token } = useAuth();
+    const { user, token } = useAuth();
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
     const [stock, setStock] = useState('');
     const [success, setSuccess] = useState(false);
+
+    if (!user?.is_admin) {
+        return <p className="text-center text-red-500">Access denied. Admins only.</p>;
+    }
 
     const handleAddProduct = async (e) => {
         e.preventDefault();

@@ -60,6 +60,29 @@ Create a `.env` file with:
 PORT=3000
 JWT_SECRET=your-secret-key
 ```
+## Test Credentials
+
+Use the following credentials to test the application:
+
+### Regular User
+- **Email:** testuser1@gmail.com
+- **Password:** test1234
+
+### Admin User
+- **Email:** admin@gmail.com
+- **Password:** a1d2m3in
+
+---
+
+### Features
+- **Admin Privileges:**
+   - Add, edit, and delete products.
+   - Manage inventory.
+
+- **Regular User Privileges:**
+   - Browse products.
+   - Add items to cart.
+   - Place orders.
 
 ## Project Structure
 
